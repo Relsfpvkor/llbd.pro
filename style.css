@@ -1,0 +1,36 @@
+
+body {
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  background: #1f1f1f;
+  padding: 1em;
+  text-align: center;
+}
+main {
+  padding: 1em;
+}
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid #444;
+}
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  color: #f1f1f1;
+  transition: 0.3s;
+}
+.tab button:hover {
+  background-color: #333;
+}
+.tabcontent {
+  display: none;
+  padding: 1em;
+}

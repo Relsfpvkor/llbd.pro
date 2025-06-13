@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lian Lee's Ultimate Keyboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Lian Lee's Ultimate Keyboard Configurator</h1>
+  </header>
+  <main>
+    <section id="keyboard-preview">
+      <p>Keyboard preview will appear here.</p>
+    </section>
+    <section id="config">
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'RapidTrigger')" id="defaultOpen">Rapid Trigger</button>
+        <button class="tablinks" onclick="openTab(event, 'Deadzone')">Deadzone</button>
+        <button class="tablinks" onclick="openTab(event, 'Debounce')">Debounce</button>
+        <button class="tablinks" onclick="openTab(event, 'RGB')">RGB</button>
+      </div>
+
+      <div id="RapidTrigger" class="tabcontent">
+        <h3>Rapid Trigger</h3>
+        <label for="rt_value">RT Threshold (mm):</label>
+        <input type="range" id="rt_value" min="0.1" max="3.6" step="0.1">
+        <span id="rt_display">1.0mm</span>
+      </div>
+
+      <div id="Deadzone" class="tabcontent">
+        <h3>Deadzone</h3>
+        <label for="dz_value">Deadzone (mm):</label>
+        <input type="range" id="dz_value" min="0.0" max="2.0" step="0.1">
+        <span id="dz_display">0.5mm</span>
+      </div>
+
+      <div id="Debounce" class="tabcontent">
+        <h3>Debounce Time</h3>
+        <label for="db_value">Time (ms):</label>
+        <input type="range" id="db_value" min="0" max="30" step="1">
+        <span id="db_display">10ms</span>
+      </div>
+
+      <div id="RGB" class="tabcontent">
+        <h3>RGB Settings</h3>
+        <label><input type="checkbox" id="rgb_toggle"> Enable RGB</label>
+        <label for="rgb_mode">Mode:</label>
+        <select id="rgb_mode">
+          <option value="rainbow">Rainbow</option>
+          <option value="breathing">Breathing</option>
+          <option value="static">Static</option>
+        </select>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <button onclick="connectDevice()">Connect Keyboard</button>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
